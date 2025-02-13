@@ -27,6 +27,7 @@
             padding: 20px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         header::after {
@@ -73,7 +74,7 @@
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
             margin: 20px 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -90,6 +91,22 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png');
+            animation: backgroundMove 30s linear infinite;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
         footer {
             position: fixed;
             bottom: 10px;
@@ -100,9 +117,20 @@
             animation: fadeIn 1s ease-in;
             animation-delay: 1s;
         }
+
+        .footer-animation {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
     </style>
 </head>
 <body>
+
+<div class="background"></div>
 
 <header>
     <h1>Welcome to ComputerGeek Games</h1>
@@ -112,7 +140,7 @@
 
 <a href="https://computergeekgames.itch.io/" class="button">Visit Our Itch.io Page</a>
 
-<footer>
+<footer class="footer-animation">
     <p>&copy; 2025 ComputerGeek Games. All rights reserved.</p>
 </footer>
 
