@@ -126,6 +126,39 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
+
+        .content {
+            padding: 20px;
+            margin-top: 100px; /* Add margin to avoid overlap with the header */
+        }
+
+        .featured-games {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .game-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 250px;
+        }
+
+        .game-title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .testimonials {
+            margin: 40px 0;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -136,9 +169,33 @@
     <h1>Welcome to ComputerGeek Games</h1>
 </header>
 
-<p>Explore our exciting games and join the fun!</p>
+<div class="content">
+    <p>Explore our exciting games and join the fun!</p>
+    
+    <a href="https://computergeekgames.itch.io/" class="button">Visit Our Itch.io Page</a>
 
-<a href="https://computergeekgames.itch.io/" class="button">Visit Our Itch.io Page</a>
+    <h2>Featured Games</h2>
+    <div class="featured-games">
+        <div class="game-card">
+            <div class="game-title">Arrow Fighht</div>
+            <p>Beign a short battle with other players. .</p>
+        </div>
+        <div class="game-card">
+            <div class="game-title">Puzzlers Haven Vex land</div>
+            <p>Amazing platformer</p>
+        </div>
+        <div class="game-card">
+            <div class="game-title">Gunraid 2</div>
+            <p>Shoot at robots.</p>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>User Testimonials</h2>
+        <p>"I love the games! They are so much fun!" - Zarran</p>
+        <p>"Best gaming experience I've had!" - User2234</p>
+    </div>
+</div>
 
 <footer class="footer-animation">
     <p>&copy; 2025 ComputerGeek Games. All rights reserved.</p>
